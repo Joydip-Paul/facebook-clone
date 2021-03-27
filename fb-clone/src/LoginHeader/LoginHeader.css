@@ -1,0 +1,37 @@
+.Header{
+    display: flex;
+    align-items: center;
+    background: #3f5d9a;
+    height: 40px;
+    overflow: hidden;
+    padding: 20px 0;
+}
+.header-logo{
+    height: 78px;
+    object-fit: cover;
+    /* margin-top: 10px;
+    margin-left: 70px; */
+    margin: 0 20px;
+}
+.header-button{
+    /* width: 138px;
+    height: 30px; */
+    color: #fff;
+    font-weight: 500;
+    /* padding-top: 7px; */
+    border-radius: 2px;
+    background-color: #42b73a;
+    border: none;
+    padding: 10px 20px;
+    
+    position: relative;
+    float: left;
+    display: flex;
+    /* margin-right: 770px; */
+    outline: none;
+    cursor: pointer;
+}
+.header-button:hover{
+    background-color: #32971e;
+    transition: .2s;
+}
