@@ -5,6 +5,7 @@ import LoginHeader from './LoginHeader/LoginHeader';
 import Login from './Login/Login';
 import RegisterHeader from './RegisterHeader/RegisterHeader';
 import Register from './Register/Register';
+import HomeHeader from './HomeHeader/HomeHeader';
 
 
 function App() {
@@ -18,9 +19,13 @@ function App() {
           <Login></Login>
         </Route>
 
-        <Route path = "/register">
+        <Route path = "/signup">
           <RegisterHeader></RegisterHeader>
           <Register></Register>
+        </Route>
+
+        <Route path = "/">
+          <HomeHeader></HomeHeader>
         </Route>
 
       </Switch>

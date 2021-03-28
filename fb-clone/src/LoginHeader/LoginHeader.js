@@ -8,7 +8,8 @@ const LoginHeader = () => {
             <Link className = "link" to = "/">
                 <img src = "https://i.ibb.co/WzybLQK/del.png" alt = "Facebook Logo" className = "header-logo"></img>
             </Link>
-            <Link className = "register" to = "/register">
+            
+            <Link to = "/signup">
                 <button className = "header-button">create new account</button>
             </Link>
         </div>

@@ -43,7 +43,7 @@ const Login = () => {
                         <hr />
                     </center>
                     <center>
-                        <Link to = "/register">
+                        <Link to = "/signup">
                            <button className = "loginCreateAccount">Create new account</button>
                         </Link>
                     </center>
