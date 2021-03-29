@@ -6,9 +6,21 @@ import Login from './Login/Login';
 import RegisterHeader from './RegisterHeader/RegisterHeader';
 import Register from './Register/Register';
 import HomeHeader from './HomeHeader/HomeHeader';
-
+import { auth } from './firebase';
+import { useState } from 'react';
+import SideBar from './SideBar/SideBar';
+import Sidebar2 from './SideBar2/SideBar2';
 
 function App() {
+  const [user, setUser] = useState([]);
+
+  auth.onAuthStateChanged((authUser) => {
+    if (authUser) {
+      setUser(authUser)
+    } else {
+      setUser(false);
+    }
+  })
   return (
     <div className="App">
      <Router>
@@ -25,7 +37,14 @@ function App() {
         </Route>
 
         <Route path = "/">
-          <HomeHeader></HomeHeader>
+          <HomeHeader user={user}></HomeHeader>
+          <div className="app__page">
+              <SideBar  user={user} ></SideBar>
+              <div className="app__posts">
+               
+              </div>
+              <Sidebar2></Sidebar2>
+          </div>
         </Route>
 
       </Switch>

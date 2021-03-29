@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './Register.css'
 import { auth } from '../firebase'
 import { useHistory } from 'react-router';
+
+
 const Register = () => {
     const history = useHistory('');
     const[firstName,setFirstName] = useState('');
@@ -22,8 +24,8 @@ const Register = () => {
                 })
             }
         })
-        .catch((err) => {
-            alert(e.message);
+        .catch((e) => {
+            alert("Something went wrong");
         });
     }
     return (

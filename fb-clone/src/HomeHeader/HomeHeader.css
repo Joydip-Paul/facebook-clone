@@ -22,10 +22,11 @@
 }
 
  .HomeHeader-inputSearch > input {
-    width: 350px;
+    width: 450px;
     height: 35px;
     margin-left: -5%;
     outline: none;
+    margin: 0 2px;
 }
 
 .HomeHeader-inputButton {

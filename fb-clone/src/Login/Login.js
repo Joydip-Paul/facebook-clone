@@ -18,8 +18,25 @@ const Login = () => {
             console.log(auth);
             history.push('/');
         })
-        .catch((err) => {
-            alert(e.message);
+        .catch((e) => {
+            if (
+                e.message ===
+                "The password is invalid or the user does not have a password."
+            ) {
+                alert("Please check your credentials again");
+            } else if (
+                e.message ===
+                "There is no user record corresponding to this identifier. The user may have been deleted."
+            ) {
+                history.push("/register");
+                window.scrollTo({
+                    top: document.body.scrollHeight,
+                    left: 0,
+                    behavior: "smooth",
+                });
+            } else {
+                alert(e.message);
+            }
         });
     }
     return (

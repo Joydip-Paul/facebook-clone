@@ -9,11 +9,13 @@ import ArrowDropDown from '@material-ui/icons/ArrowDropDown'
 import { auth } from '.././firebase'
 import { Avatar } from '@material-ui/core';
 import './HomeHeader.css'
+import { useState } from 'react';
 
-const HomeHeader = ({user}) => {
+const HomeHeader = ({ user }) => {
+
     const history = useHistory('');
     if(user === false){
-        history.push("/login")
+        history.push('/login')
     }
     const Logout = (e) => {
         console.log("Logout");
@@ -41,7 +43,7 @@ const HomeHeader = ({user}) => {
                 </section>
                     <h3 className = "homeHeader-dash">|</h3>
                 <section>
-                    <h3 className = "homeHeader-name">Name</h3>
+                    <h3 className = "homeHeader-name">Group</h3>
 
                 </section>
                     <h3 className = "homeHeader-dash">|</h3>
