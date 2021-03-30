@@ -16,6 +16,7 @@ const Register = () => {
         auth.createUserWithEmailAndPassword(email,password)
         .then((auth) => {
             console.log("sign in");
+            alert("Login Successful")
             if(auth.user){
                 auth.user.updateProfile({
                     displayName: firstName + " " + lastName

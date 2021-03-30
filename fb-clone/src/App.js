@@ -10,6 +10,7 @@ import { auth } from './firebase';
 import { useState } from 'react';
 import SideBar from './SideBar/SideBar';
 import Sidebar2 from './SideBar2/SideBar2';
+import Post from './Post/Post';
 
 function App() {
   const [user, setUser] = useState([]);
@@ -41,7 +42,7 @@ function App() {
           <div className="app__page">
               <SideBar  user={user} ></SideBar>
               <div className="app__posts">
-               
+               <Post user={user}/>
               </div>
               <Sidebar2></Sidebar2>
           </div>
